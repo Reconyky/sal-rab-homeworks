@@ -24,9 +24,9 @@ function addInCartCountChange(value) {
     // Задание №1.2. Увеличение количества в корзине
     let oldValue = value;
 
-    // создайте переменную newValue
-    // присвойте ей значение oldValue
-    // увеличьте значение newValue на 1
+    let newValue;// создайте переменную newValue
+    newValue = oldValue;// присвойте ей значение oldValue
+    newValue = (newValue + 1);// увеличьте значение newValue на 1
 
     // Конец решения задания №1.2.
 
@@ -39,9 +39,11 @@ function addInCartSumChange(sum, delta) {
 
     // Задание №1.3. Увеличение суммы в корзине
 
-    // создайте переменную newSum и присвойте ей сумму oldSum и difference
-    // создайте переменную newSumText и присвойте ей результат склеивания переменной newSum и текста ' ₽'
-    // замените склеивание, используемое в newSum Text на шаблонную строку
+    let newSum;
+        newSum = oldSum;// создайте переменную newSum и присвойте ей сумму oldSum и difference
+        newSum = difference;
+    let newSumText = (oldSum + difference + ' ₽');// создайте переменную newSumText и присвойте ей результат склеивания переменной newSum и текста ' ₽'
+        newSumText = ``;// замените склеивание, используемое в newSum Text на шаблонную строку
 
     // Конец решения задания №1.3.
 
