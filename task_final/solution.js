@@ -61,6 +61,8 @@ function sendRequest(name, phone, address, goods, sum) {
     data.order.sum = name + phone + address + goods + sum; 
 
     data.client = 'Иван Васильевич';
+    data.phone = '+7(987)65-43-210';
+    data.title = 'Пицца';
    
 
     let jsonData = JSON.stringify(data);
