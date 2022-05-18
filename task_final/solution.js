@@ -34,18 +34,19 @@
 // }
 
 function sendRequest(name, phone, address, goods, sum) {
-    let data = {client: name + phone, // подумать о складывании значений в данном свойстве
-                goods: [
-                    {
-                     title: "Пицца",
-                     count: 2
-             }
-            ],
-                order: {
-                       address: "ул. Ленина, дом 2, 4 подъезд, 5 этаж, кв 53",
-                       sum: "900",
-             }
-            };
+    let data = {
+        client: "Иван +7(987(65-43-210", 
+        goods: [
+         {
+           title: "Пицца",
+           count: 2
+         }
+       ],
+        order: {
+           address: "ул. Ленина, дом 2, 4 подъезд, 5 этаж, кв 53",
+            sum: "900",
+    }
+};
 
     let countOfGoods = goods.length;
 
@@ -54,10 +55,10 @@ function sendRequest(name, phone, address, goods, sum) {
     }
 
     data.order.address = address;
-    data.order.sum = name + phone + address + goods + sum; // сложение свойств не актуальное, подумать о праивльности последовательности
+    data.order.sum = name + phone + address + goods + sum; 
 
     data.client = 'Иван';
-    data.phone = '+7(987)65-43-210';
+   
 
     let jsonData = JSON.stringify(data);
 
