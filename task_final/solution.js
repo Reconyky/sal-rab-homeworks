@@ -44,7 +44,7 @@ function sendRequest(name, phone, address, goods, sum) {
        ],
         "order": {
            "address": "ул. Ленина, дом 2, 4 подъезд, 5 этаж, кв 53",
-            "sum": "900",
+            "sum": 900,
     }
 };
 
