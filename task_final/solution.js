@@ -41,13 +41,7 @@ function sendRequest(name, phone, address, goods, sum) {
         goods: [],
 
            order: {
-           address:{
-               street,
-               house, 
-               entrance,
-               floor,
-               flat
-           },
+           address ,
         sum
     }
 };
