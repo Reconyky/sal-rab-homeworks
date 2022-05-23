@@ -53,8 +53,8 @@ function sendRequest(name, phone, address, goods, sum) {
         data.goods.push(goods[i].count);
     }
 
-    data.order.address = `'ул.' ${address[street]}, 'дом' ${address[house]}, ${address[entrance]} 'подъезд', 
-                         ${address[floor]} 'этаж', ${address[flat]} 'квартира'`;
+    data.order.address = `'ул.' ${street}, 'дом' ${house}, ${entrance} 'подъезд', 
+                         ${floor} 'этаж', ${flat} 'квартира'`;
         
     data.order.sum = sum; 
 
