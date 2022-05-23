@@ -1,5 +1,40 @@
 // Исправьте функцию sendRequest
 // Аргументы функции:
+function sendRequest(name, phone, address, goods, sum) {
+    
+    let data = {
+          
+        goods: [
+
+          ],
+          
+          order: {
+
+          }
+    };
+
+    
+    
+    
+    let countOfGoods = goods.length;
+   
+      for (let i = 0; i < countOfGoods; i++) {
+        data.goods.push(goods[i].title);
+        data.goods.push(goods[i].count);
+    }
+
+    data.order.address = `'ул.' ${address[street]}, 'дом' ${address[house]}, ${address[entrance]} 'подъезд', 
+                         ${address[floor]} 'этаж', ${address[flat]} 'квартира'`;
+        
+    data.order.sum = sum; 
+
+    data.client = `${client[name]} + ${client[phone]}`;
+
+    let jsonData = JSON.stringify({data});
+
+    return jsonData;
+}
+
 // - имя клиента
 // - телефон клиента
 // - объект с адресом доставки: {street, house, entrance, floor, flat}
@@ -39,27 +74,3 @@
 
 
 
-function sendRequest(name, phone, address, goods, sum) {
-    let data = {
-          goods: [],
-          order: {}
-    };
-
-    let countOfGoods = goods.length;
-   
-      for (let i = 0; i < countOfGoods; i++) {
-        data.goods.push(goods[i].title);
-        data.goods.push(goods[i].count);
-    }
-
-    data.order.address = `'ул.' ${address[street]}, 'дом' ${address[house]}, ${address[entrance]} 'подъезд', 
-                         ${address[floor]} 'этаж', ${address[flat]} 'квартира'`;
-        
-    data.order.sum = sum; 
-
-    data.client = `${client[name]} + ${client[phone]}`;
-
-    let jsonData = JSON.stringify({data});
-
-    return jsonData;
-}
