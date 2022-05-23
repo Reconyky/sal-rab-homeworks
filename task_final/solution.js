@@ -23,7 +23,7 @@ function sendRequest(name, phone, address, goods, sum) {
 
     }
 
-    data.order.address = `'ул.' ${address[street]}, 'дом' ${address[house]}, ${address[entrance]} 'подъезд', 
+    data.order = `'ул.' ${address[street]}, 'дом' ${address[house]}, ${address[entrance]} 'подъезд', 
                          ${address[floor]} 'этаж', ${address[flat]} 'квартира'`;
         
     data.order.sum = sum; 
