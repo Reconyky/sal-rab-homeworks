@@ -9,9 +9,15 @@ function sendRequest(name, phone, address, goods, sum) {
           ],
           
           order: {
-              address,
+              address: {
+                street,
+                house,
+                entrance,
+                floor,
+                flat,
               sum
           }
+        }
     };
 
     
@@ -24,12 +30,12 @@ function sendRequest(name, phone, address, goods, sum) {
 
     }
 
-    data.order.address =(`'ул.' ${address.street}, 'дом' ${address.house}, ${address.entrance} 'подъезд', 
-                         ${address.floor} 'этаж', ${address.flat} 'квартира'`);
+    data.order.address =`'ул.' ${address.street}, 'дом' ${address.house}, ${address.entrance} 'подъезд', 
+                         ${address.floor} 'этаж', ${address.flat} 'квартира'`;
         
     data.order.sum = sum; 
 
-    data.client = (`${client.name} + ${client.phone}`);
+    data.client = `${client.name} + ${client.phone}`;
 
     let jsonData = JSON.stringify({data});
 
