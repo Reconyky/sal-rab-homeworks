@@ -24,8 +24,8 @@ function sendRequest(name, phone, address, goods, sum) {
 
     }
 
-    data.order.address =`'ул. '${address.street}, 'дом '${address.house}, ${address.entrance}' подъезд', 
-                         ${address.floor}' этаж', ${address.flat}' квартира'`;
+    data.order.address =`ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, 
+                         ${address.floor} этаж, ${address.flat} квартира`;
         
     data.order.sum = sum; 
 
@@ -45,7 +45,7 @@ function sendRequest(name, phone, address, goods, sum) {
     
     let data = {
 
-        client: "",
+        client: '',
           
         goods: [
 
@@ -69,8 +69,8 @@ function sendRequest(name, phone, address, goods, sum) {
         
     }
 
-    data.order.address = `'ул.' ${address.street}, 'дом' ${address.house}, ${address.entrance} 'подъезд', 
-                         ${address.floor} 'этаж', ${address.flat} 'квартира'`;
+    data.order.address = `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, 
+                         ${address.floor} этаж, ${address.flat} квартира`;
         
     data.order.sum = sum; 
 
