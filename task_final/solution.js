@@ -29,7 +29,7 @@ function sendRequest(name, phone, address, goods, sum) {
         
     data.order.sum = sum; 
 
-    data.client = `'${client.name} ${client.phone}'`;
+    data.client = `'${name} ${phone}'`;
 
     let jsonData = JSON.stringify({data});
 
@@ -44,6 +44,8 @@ function sendRequest(name, phone, address, goods, sum) {
 function sendRequest(name, phone, address, goods, sum) {
     
     let data = {
+
+        client: "",
           
         goods: [
 
@@ -72,7 +74,7 @@ function sendRequest(name, phone, address, goods, sum) {
         
     data.order.sum = sum; 
 
-    data.client = `'${client.name} ${client.phone}'`;
+    data.client = `'${name} ${phone}'`;
 
     let jsonData = JSON.stringify({data});
 
